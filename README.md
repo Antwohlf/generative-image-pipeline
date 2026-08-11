@@ -4,9 +4,27 @@ A controlled, model-agnostic production pipeline for generative image assets.
 
 Image models are nondeterministic. Shipping image families does not have to be. This project turns prompt matrices and reference images into inspectable plans, resumable generation jobs, normalized candidates, review sheets, approval records, validation reports, and gated release manifests.
 
-![Ann Arbor rendered consistently across morning, day, evening, and night](docs/assets/ann-arbor-variant-matrix.webp)
+## Production examples
 
-<p align="center"><sub>A real output family from <a href="https://anthonywohlfeil.com">anthonywohlfeil.com</a>: Ann Arbor across morning, day, evening, and night.</sub></p>
+### Time of day: Ann Arbor
+
+![Ann Arbor shown during morning, day, evening, and night](docs/assets/ann-arbor-time-of-day.webp)
+
+<p align="center"><sub>One approved summer composition across four clear-weather time segments.</sub></p>
+
+### Season: New York City
+
+![New York City shown during winter, spring, summer, and fall](docs/assets/new-york-seasonal.webp)
+
+<p align="center"><sub>One clear daytime composition across winter, spring, summer, and fall.</sub></p>
+
+### Full QA matrix: Detroit
+
+![A four-by-four Detroit quality-assurance matrix crossing time of day with weather](docs/assets/detroit-qa-matrix.webp)
+
+<p align="center"><sub>Rows vary time of day. Columns vary clear, partly cloudy, cloudy, and dark weather states.</sub></p>
+
+These image families grew out of the production background system on [anthonywohlfeil.com](https://anthonywohlfeil.com).
 
 ## What it solves
 
