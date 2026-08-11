@@ -4,6 +4,10 @@ A controlled, model-agnostic production pipeline for generative image assets.
 
 Image models are nondeterministic. Shipping image families does not have to be. This project turns prompt matrices and reference images into inspectable plans, resumable generation jobs, normalized candidates, review sheets, approval records, validation reports, and gated release manifests.
 
+![Ann Arbor rendered consistently across morning, day, evening, and night](docs/assets/ann-arbor-variant-matrix.webp)
+
+<p align="center"><sub>A real output family from <a href="https://anthonywohlfeil.com">anthonywohlfeil.com</a>: Ann Arbor across morning, day, evening, and night.</sub></p>
+
 ## What it solves
 
 Generating one image is easy. Producing a coherent set of assets across locations, seasons, times, products, or campaign states is harder:
