@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "name": "seasonal-scenes-demo",
+  "description": "A safe, synthetic example of a reference-driven seasonal asset matrix.",
+  "variants": [
+    {
+      "id": "coast",
+      "references": ["references/coast.svg"],
+      "variables": {
+        "subject": "a quiet coastal overlook with a winding path and distant water"
+      }
+    },
+    {
+      "id": "city",
+      "references": ["references/city.svg"],
+      "variables": {
+        "subject": "a compact city skyline viewed from a public park"
+      }
+    }
+  ],
+  "axes": {
+    "season": ["spring", "winter"],
+    "time": ["morning", "night"]
+  },
+  "promptTemplate": "Create a landscape image of {{subject}} in {{season}} during {{time}}. Preserve the reference composition and major landmarks. Change only season, lighting, vegetation, and atmosphere. Do not add text, logos, frames, or watermarks.",
+  "namingTemplate": "{{id}}_{{season}}_{{time}}.png",
+  "output": {
+    "width": 1536,
+    "height": 1024,
+    "fit": "cover",
+    "format": "png"
+  },
+  "generation": {
+    "provider": "manual",
+    "model": "gpt-image-2-2026-04-21",
+    "quality": "high",
+    "retries": 3,
+    "delayMs": 500
+  },
+  "approval": {
+    "requireAll": true
+  }
+}

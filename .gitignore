@@ -1,0 +1,11 @@
+node_modules/
+dist/
+output/
+.env
+.DS_Store
+*.log
+coverage/
+
+# Real inputs, generated candidates, and approval artifacts belong outside git.
+work/
+inbox/
