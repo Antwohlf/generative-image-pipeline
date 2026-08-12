@@ -7,7 +7,7 @@ The `manual` adapter writes one JSON request per planned asset into `requests/`.
 Generate those images with Codex, another agent, or a design tool. Place completed files into `inbox/` using the expected filenames, then rerun the same command. The adapter imports them without changing the plan.
 
 ```bash
-pnpm gip run --manifest examples/seasonal-scenes/pipeline.json --work-dir work/seasonal --provider manual
+pnpm multitake run --manifest examples/seasonal-scenes/pipeline.json --work-dir work/seasonal --provider manual
 ```
 
 ## OpenAI
@@ -17,7 +17,7 @@ The `openai` adapter uses the Image API. Jobs with references use image edits; j
 Paid generation requires both `OPENAI_API_KEY` and the explicit `--confirm-cost` flag.
 
 ```bash
-OPENAI_API_KEY=... pnpm gip run \
+OPENAI_API_KEY=... pnpm multitake run \
   --manifest examples/seasonal-scenes/pipeline.json \
   --work-dir work/seasonal \
   --provider openai \

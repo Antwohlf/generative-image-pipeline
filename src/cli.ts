@@ -11,8 +11,8 @@ import { runPipeline } from "./core/pipeline.js";
 const program = new Command();
 
 program
-  .name("gip")
-  .description("Controlled, model-agnostic generative image production")
+  .name("multitake")
+  .description("Generate, compare, and approve consistent takes of the same scene")
   .version("0.1.0");
 
 program

@@ -1,6 +1,6 @@
-# Generative Image Pipeline
+# Multi-Take Image Generation Pipeline
 
-A controlled, model-agnostic production pipeline for generative image assets.
+Generate, compare, and approve consistent takes of the same scene.
 
 Image models are nondeterministic. Shipping image families does not have to be. This project turns prompt matrices and reference images into inspectable plans, resumable generation jobs, normalized candidates, review sheets, approval records, validation reports, and gated release manifests.
 
@@ -85,7 +85,7 @@ No API key or network request is required for the demo.
 Start with the manual adapter:
 
 ```bash
-pnpm gip run \
+pnpm multitake run \
   --manifest examples/seasonal-scenes/pipeline.json \
   --work-dir work/seasonal \
   --provider manual
@@ -96,8 +96,8 @@ The first run writes generation packages to `work/seasonal/requests/`. Generate 
 After reviewing the contact sheet, edit `approvals.json` or approve the complete set:
 
 ```bash
-pnpm gip approve --work-dir work/seasonal --all
-pnpm gip run \
+pnpm multitake approve --work-dir work/seasonal --all
+pnpm multitake run \
   --manifest examples/seasonal-scenes/pipeline.json \
   --work-dir work/seasonal \
   --provider manual
@@ -110,7 +110,7 @@ The release manifest is written only when validation and approval policies pass.
 The OpenAI adapter uses `gpt-image-2` through the Image API, with the dated snapshot pinned in the example manifest. Reference-driven jobs use image editing; text-only jobs use image generation. Paid calls require explicit confirmation.
 
 ```bash
-OPENAI_API_KEY=... pnpm gip run \
+OPENAI_API_KEY=... pnpm multitake run \
   --manifest examples/seasonal-scenes/pipeline.json \
   --work-dir work/seasonal \
   --provider openai \

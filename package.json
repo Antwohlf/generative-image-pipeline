@@ -1,10 +1,10 @@
 {
-  "name": "generative-image-pipeline",
+  "name": "multi-take-image-generation-pipeline",
   "version": "0.1.0",
-  "description": "A controlled, model-agnostic production pipeline for generative image assets.",
+  "description": "Generate, compare, and approve consistent takes of the same scene.",
   "type": "module",
   "bin": {
-    "gip": "dist/cli.js"
+    "multitake": "dist/cli.js"
   },
   "files": [
     "dist",
@@ -17,7 +17,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "demo": "tsx src/cli.ts demo --manifest examples/seasonal-scenes/pipeline.json --work-dir output/demo",
-    "gip": "tsx src/cli.ts"
+    "multitake": "tsx src/cli.ts"
   },
   "engines": {
     "node": ">=22"

@@ -9,7 +9,7 @@ const manifestPath = path.resolve("examples/seasonal-scenes/pipeline.json");
 
 describe("offline fixture pipeline", () => {
   it("runs from a stable plan through an approved release", async () => {
-    const workDirectory = await mkdtemp(path.join(os.tmpdir(), "gip-"));
+    const workDirectory = await mkdtemp(path.join(os.tmpdir(), "multitake-"));
     const first = await runPipeline({ manifestPath, workDirectory, provider: "fixture" });
     expect(first.status).toBe("awaiting_approval");
     expect(first.counts.total).toBe(8);
